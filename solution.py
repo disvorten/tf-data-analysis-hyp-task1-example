@@ -10,7 +10,7 @@ def solution(x_success: int,
              y_success: int,
              y_cnt: int) -> bool:
     alpha = 0.06
-    a, b = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative='smaller')
+    a, b = proportions_ztest([x_success, y_success], [x_cnt, y_cnt], alternative='larger')
     if b <= alpha:
         return True
     else:
